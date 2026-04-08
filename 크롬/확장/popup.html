@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <title>Lion Event Explorer</title>
   <style>
-    body { width: 200px; padding: 15px; text-align: center; font-family: sans-serif; }
-    button { padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold;}
-    button:active { background: #0056b3; }
+    body {
+      font-family: Arial, sans-serif;
+      width: 280px;
+      padding: 12px;
+      margin: 0;
+      background: #f7f9fc;
+    }
+    h1 {
+      font-size: 15px;
+      margin: 0 0 10px;
+    }
+    .row {
+      margin-bottom: 8px;
+      font-size: 12px;
+      color: #333;
+    }
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      background: #2563eb;
+      color: #fff;
+    }
+    button:disabled {
+      background: #94a3b8;
+      cursor: not-allowed;
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+      white-space: pre-wrap;
+      color: #0f172a;
+      min-height: 36px;
+    }
   </style>
 </head>
 <body>
-  <h3>🔥 스나이퍼 모드</h3>
-  <button id="connectBtn">백엔드 연결 및 대기</button>
+  <h1>Lion Event Explorer</h1>
+
+  <div class="row">현재 탭 URL을 서버로 전송해 안전 이벤트 분석을 시작합니다.</div>
+
+  <button id="runBtn">분석 시작</button>
+  <div id="status">준비됨</div>
+
   <script src="popup.js"></script>
 </body>
 </html>

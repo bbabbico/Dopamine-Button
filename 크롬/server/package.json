@@ -1,18 +1,19 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "lion-server",
+  "version": "2.0.0",
+  "description": "Safe event exploration backend for Lion Chrome extension",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node -e \"console.log('no tests configured')\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "axios": "^1.14.0",
     "express": "^5.2.1",
-    "ws": "^8.20.0"
+    "playwright": "^1.54.2"
   }
 }

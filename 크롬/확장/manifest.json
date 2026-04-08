@@ -1,21 +1,24 @@
 {
   "manifest_version": 3,
-  "name": "Proxy Random Trigger",
-  "version": "1.0",
-  "description": "백엔드 신호를 받아 무작위 이벤트를 실행합니다.",
+  "name": "Lion Event Explorer",
+  "version": "2.0.0",
+  "description": "현재 탭 URL을 서버에 전달하고, 안전한 범위에서 이벤트를 분석/재생합니다.",
   "action": {
     "default_popup": "popup.html"
   },
   "background": {
     "service_worker": "background.js"
   },
+  "permissions": ["activeTab", "tabs"],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "https://localhost:3000/*"
+  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
-  ],
-  "permissions": [
-    "activeTab"
   ]
 }

@@ -1,13 +1,37 @@
-document.getElementById('connectBtn').addEventListener('click', async () => {
-  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+const runBtn = document.getElementById('runBtn');
+const statusEl = document.getElementById('status');
 
-  // 1. 백그라운드(서버)에 타겟 URL 접속 및 분석 지시
-  chrome.runtime.sendMessage({ action: 'START_ANALYSIS', url: tab.url });
+runBtn.addEventListener('click', async () => {
+  runBtn.disabled = true;
+  statusEl.textContent = '작업 요청 중...';
 
-  // 2. 현재 웹페이지(content.js)에 "기다리는 동안 막 눌러!" 지시
-  chrome.tabs.sendMessage(tab.id, { action: 'START_HUNTING' });
-  
-  const btn = document.getElementById('connectBtn');
-  btn.innerText = "대기 중 난사 모드 가동! 🔫";
-  btn.style.background = "#ff9800";
+  try {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    if (!tab?.id || !tab?.url) {
+      throw new Error('활성 탭 URL을 찾지 못했습니다.');
+    }
+
+    const response = await chrome.runtime.sendMessage({
+      action: 'START_ANALYSIS',
+      payload: {
+        url: tab.url,
+        options: {
+          maxActions: 35,
+          localBurstCount: 8,
+          allowProxyEvents: true
+        }
+      }
+    });
+
+    if (!response?.ok) {
+      throw new Error(response?.error || '작업 시작 실패');
+    }
+
+    statusEl.textContent = `작업 생성됨: ${response.jobId}\n로컬 실행 + 서버/프록시 분석 진행 중`;
+  } catch (error) {
+    statusEl.textContent = `오류: ${error.message}`;
+  } finally {
+    runBtn.disabled = false;
+  }
 });
