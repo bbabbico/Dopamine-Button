@@ -8,4 +8,4 @@
 `npm install express playwright`
 
 - 크롬/server 경로에서 node 서버 실행 후 크롬 확장프로그램 이용.
-`node server.js`
+- `node server.js`
