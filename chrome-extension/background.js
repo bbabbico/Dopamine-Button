@@ -1,7 +1,7 @@
 // 배포된 서버 주소로 변경하세요.
 // 로컬 테스트 시에는 'http://localhost:3000' 을 유지하세요.
 // const SERVER_URL = 'http://localhost:3000';
-const SERVER_URL = 'https://bbabbico8908-c1ba13qe.apn.leapcell.dev';
+const SERVER_URL = 'https://lion-bbabbico8908-sequyaw0.apn.leapcell.dev';
 
 let redirectInterval = null;
 let currentLinks = [];
