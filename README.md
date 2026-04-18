@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="output/dopamine-button-icon-128.png" alt="도파민 버튼 로고" width="128">
+  <img src="https://d2z0o16i8xm8ak.cloudfront.net/web/direct-files/d53257afe93a016005a9e4ce8a9e2a94/258ba236-70d4-4496-9ee5-1ceb62d54026/3ac7290d.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9kMnowbzE2aTh4bThhay5jbG91ZGZyb250Lm5ldC93ZWIvZGlyZWN0LWZpbGVzL2Q1MzI1N2FmZTkzYTAxNjAwNWE5ZTRjZThhOWUyYTk0LzI1OGJhMjM2LTcwZDQtNDQ5Ni05ZWU1LTFjZWI2MmQ1NDAyNi8zYWM3MjkwZC5wbmc~KiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3NzEyNzU2NX19fV19&Signature=RBcvvGmSYa3UFQ0OV-2KWWPTcQpAXBb3s8~M5hoJWMQ3m2vG9yHwYkn9mavsvPZ6W-kHimoAiIRuOiu8k3a~p0Gj58hKxUs3TwlseLk6hYrR4fXLVU6dsDWsq56VSGgbXGPpoHuyH76GjaOCd3KeD5owZTUq-8Ls1bmAjtVbvC5dM5EmDFRgbFxgTbezLD1MXLDvslWwjDh5F1mAsceiNKNgveucQbbfcOj2affRzKHPvxKHTgnzHM2s4EqfqLGL8d8ebRMkq33aL-Nkeu~GytY85YFKiwLklHhecdeL-UhgZek1Bkt-q4dZcEobnMFhL6OaW807pCY0KeenSrz20A__&Key-Pair-Id=K1BF7XGXAIMYNX" alt="도파민 버튼 로고" width="128">
   <h1>💥 도파민 버튼 (Dopamine Button)</h1>
   <p><b>책임 없는 쾌락은 가짜다. 웹사이트 러시안 룰렛 확장프로그램.</b></p>
 </div>
